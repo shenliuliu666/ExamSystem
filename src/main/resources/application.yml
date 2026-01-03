@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: examination-system
+  datasource:
+    url: ${EXAM_DB_URL:jdbc:mysql://localhost:3306/exam?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${EXAM_DB_USERNAME:root}
+    password: ${EXAM_DB_PASSWORD}
+  sql:
+    init:
+      mode: always
